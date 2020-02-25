@@ -1,15 +1,17 @@
 body{
     margin: 0rem;
+}
+
+.o-containerEverything{
+    width: 100vw;
+    height: 100vh;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
 .o-containerAll{
-    height: 471px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -71,8 +73,8 @@ body{
     height: 48px;
     background: #2F4251;
     color: #ffffff;
-    padding-left: 1rem;
     border-radius: 30px;
+    text-align-last:center;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -115,7 +117,7 @@ body{
 .o-textLittleTitleResult{
     color: #BBC7D6;
     margin: 0px;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -124,5 +126,6 @@ body{
 
 .o-textResult{
     margin: -0.5rem 0rem;
+    font-family: Roboto, sans-serif;
     font-size: 78px;
 }

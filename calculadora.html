@@ -7,33 +7,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="resources/main.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <script src="main.js"></script>
+    <script src="resources/utility.js"></script>
 </head>
 <body>
-    <div class="o-containerAll">
-        <div id="containerCalc" class="o-containerCalc">
-            <p class="o-textTitle">UAO</p>
-            <p class="o-textTitleBold">CALCULATOR</p>
-            <p class="o-textLittleTitle">Numero 1</p>
-            <input type="text" class="o-inputNumbers">
-            <div class="o-containerLine"></div>
-            <p class="o-textLittleTitle" >Numero 2</p>
-            <input type="text" class="o-inputNumbers">
-            <div class="o-containerLine"></div>
-            <p class="o-textLittleTitle">Operación</p>
-            <select name="operaciones" id="selectOp" class="o-selectOp">
-                <option value="suma">Suma</option>
-                <option value="resta">Resta</option>
-                <option value="multiplicacion">Multiplicación</option>
-                <option value="division">División</option>
-            </select>
-        </div>
-        <button id="buttonEqual" class="o-buttonEqual">=</button>
-        <div id="containerResult" class="o-containerResult">
-            <div class="o-containerResultText">
-                <p class="o-textLittleTitleResult">Resultado</p>
-                <h1 id="txtResultado" class="o-textResult">Numero</h1>
-            </div>    
+    <div class="o-containerEverything">
+        <div class="o-containerAll">
+            <div id="containerCalc" class="o-containerCalc">
+                <p class="o-textTitle">UAO</p>
+                <p class="o-textTitleBold">CALCULATOR</p>
+                <p class="o-textLittleTitle">Numero 1</p>
+                <input id="inputNum1" type="number" class="o-inputNumbers" onChange="handleInput('inputNum1')">
+                <div class="o-containerLine"></div>
+                <p class="o-textLittleTitle" >Numero 2</p>
+                <input id="inputNum2" type="number" class="o-inputNumbers" onChange="handleInput('inputNum2')">
+                <div class="o-containerLine"></div>
+                <p class="o-textLittleTitle">Operación</p>
+                <select id="stSelected" name="operaciones" id="selectOp" class="o-selectOp" onChange="selectOp()">
+                    <option value="suma">Suma</option>
+                    <option value="resta">Resta</option>
+                    <option value="multiplicacion">Multiplicación</option>
+                    <option value="division">División</option>
+                </select>
+            </div>
+            <button id="buttonEqual" class="o-buttonEqual">=</button>
+            <div id="containerResult" class="o-containerResult">
+                <div class="o-containerResultText">
+                    <p class="o-textLittleTitleResult">Resultado</p>
+                    <h1 id="txtResult" class="o-textResult">0</h1>
+                </div>    
+            </div>
         </div>
     </div>
 </body>
